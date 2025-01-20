@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title> 5. 입력양식 태그 </title>
+        <!--
+            날짜 : 2025.01.20
+            이름 : 곽혜수
+            내용 : 2장 HTML 기본 태그 - 입력양식태그
+        --> 
+    </head>
+    <body>
+        <h3> 5. 입력 양식 태그 </h3>
+
+        <h4> 로그인 </h4>
+        <form action="https://google.com">
+            <table border="1">
+                <tr>
+                    <td>아이디</td>
+                    <td>
+                        <input type="text" name="uid" placeholder="ID"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td>비밀번호</td>
+                    <td>
+                        <input type="password" name="pass" placeholder="PASSWORD"/>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        <!-- form action 주소로 입력 데이터 전송 -->
+                        <input type="submit" value="로그인">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+        <h4> 회원가입</h4>
+        <form action="https://google.com">
+            <table border="1">
+                <tr>
+                    <td>NAME</td>
+                    <td>
+                        <input type="text" name = "name">
+                    </td>
+                </tr>
+                <tr>
+                    <td>BIRTH</td>
+                    <td>
+                        <input type="date" name="birth">
+                    </td>
+                </tr>
+                <tr>
+                    <td>EMAIL</td>
+                    <td>
+                        <input type="email" name="email">
+                    </td>
+                </tr>
+                <tr></tr>
+                    <td>AGE</td>
+                    <td>
+                        <input type="number" name = "age">
+                    </td>
+                <tr>
+                    <td>GENDER</td>
+                    <td>
+                        <label> <input type="radio" name = "gender" value="M"> MALE </label>
+                        <label> </label><input type="radio" name = "gender" value="F"> FEMALE </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>FAVORITE</td>
+                    <td>
+                        <label><input type="checkbox" name="hobby" value="Hiking"> Hiking </label>
+                        <label><input type="checkbox" name="hobby" value="Movie"> Movie </label>
+                        <label><input type="checkbox" name="hobby" value="Reading"> Reading </label>
+                        <label><input type="checkbox" name="hobby" value="Exercise"> Exercise </label>
+                        <label><input type="checkbox" name="hobby" value="Walking"> Walking </label>
+                    </td>
+                </tr>
+                <tr>
+                    <td>ADDRESS</td>
+                    <td>
+                        <select name="address">
+                            <option>SEOUL</option>
+                            <option>DAEJEON</option>
+                            <option>DAEGU</option>
+                            <option>BUSAN</option>
+                            <option>GWANGJU</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>INFORMATION</td>
+                    <td>
+                        <textarea name="introduce" rows="10" cols="40"></textarea>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2" align="right">
+                        <input type="submit" value="REGISTER">
+                    </td>
+                </tr>
+
+            </table>
+
+        </form>
+
+
+
+    </body>
+</html>
