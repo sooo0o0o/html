@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang = "en">
+    <head>
+        <meta charset="utf-8">
+        <title> 5. CSS Selector Practice</title>
+        <!-- 
+                날짜 : 2025.01.21
+                이름 : 곽혜수
+                내용 : CSS 선택자 연습문제
+        -->
+        <style>
+            h1 {
+                color: #4A90E2;
+            }
+            header {
+                background-color: #f5f5f5;
+            }
+            span.highlight {
+                color: #f39c12;
+            }
+            /*4*/nav a {
+                color: #e74c3c;
+            }
+            /*section.intro*/
+            section[class=intro] {
+                background-color: #e8f4f8;
+            }
+            /*h2.title*/
+            h2[class=title] {
+                color: #27ae60;
+            }
+            /*7*/
+            /*.content > .article:nth-child(1)*/
+                div:first-child {
+                background-color: #bdc3c7;
+            }
+            /*8. 두번째 article 클래스를 가진 div 요소*/
+            /*.article:nth-of-type(2)*/
+                div:nth-child(2) {
+                background-color: #fad7a0;
+            }
+            /*9. article 클래슬르 가진 div 요소 내의 p 요소*/
+            /*.article p*/
+            div[class=article]>p {
+                color: #9b59b6;
+            }
+            /*10. 모든 section 요소*/
+            section {
+                border: 1px dashed #e74c3c;
+            }
+            /*11.footer 안의 모든 a 요소*/
+            footer a {
+                color: #34495e;
+            }
+            /*12.header 요소 안의 첫번째 li 요소*/
+            /*header li:first-child*/
+            header > nav > li:first-child {
+                border: 1px solid #111;
+            }
+            /*13. header 요소 안의 마지막 li 요소
+            header li:last-child*/
+
+            /*14. header 자식 nav 자식 ul 자식 요소의 모든 li 요소
+            header > nav > ul > li*/
+
+            /*15. header의 자식 nav 의 자식 ul 요소의 첫번째 a 요소
+            header > nav > ul > li:nth-child(1) > a*/
+
+            /*16. header 의 자식 nav의 자식 ul 요소의 두번째 a 요소
+            header > nav > ul > li:nth-child(2) > a*/
+
+            /*17. body 요소의 직계 자식 section 요소
+            body > section*/
+
+            /*18. 클래스 이름이 content 인 section 요소 내의 h2 요소
+            .content h2*/
+
+            /*19. header 요소 내의 모든 자손 li 요소
+            header li*/
+
+            /*20. footer 요소 내의 첫번째 a 요소
+            footer > a:nth-child(2)*/
+                /* footer > a:nth-of-type(1)*/
+                /* footer > a:first-of-type*/
+
+            /*21. section 요소 중 첫번째 요소
+            section:first-of-type*/
+
+            /*22. section 요소 중 마지막 요소
+            section:last-of-type*/
+
+            /*23. p 요소 중 첫번째 요소
+            p:nth-of-type(1)*/
+                /*P:first-of-type*/
+
+            /*24. p 요소 중 마지막 요소
+            p:nth-last-of-type(1)*/
+
+            /*25. title 클래스가 있는 h2 요소의 형제 요소
+            .title + p*/
+
+            /*26. title 클래스가 있는 h2 요소의 모든 형제 요소
+            .title ~ * */
+
+            /*27. h2 요소 중 첫번째 요소
+            h2:first-of-type*/
+
+            /*28. ol 요소의 자식 li 요소 중 홀수번째 요소
+            ol > li:nth-child(2n+1)*/
+
+            /*29. 클래스 이름이 intro 인 요소가 마우스호버일때
+            .intro:hover*/
+
+            /*30. footer 요소의 자식 마지막 번째 a 요소 끝의 가상요소
+            footer > a:last-child::after */
+
+
+
+        </style>
+    </head>
+    <body>
+        <header>
+            <h1> 5. CSS Selector Practice</h1>
+            <nav>
+                <ul>
+                    <li><a href="#">Home</a></li>
+                    <li><a href="#">About</a></li>
+                    <li><a href="#">Services</a></li>
+                    <li><a href="#">Contact</a></li>
+                </ul>
+            </nav>
+        </header>
+        <section class="intro">
+            <p> Hello, <span class="highlight">world</span>!</p>
+        </section>
+        <section class="content">
+            <div class="article">
+                <h2 class="title">Article 1</h2>
+                <p>Content of article 1</p>
+                <ol>
+                    <li>item1</li>
+                    <li>item2</li>
+                    <li>item3</li>
+                </ol>
+            </div>
+            <div class="article">
+                <h2 class="title">Article 2</h2>
+                <p>Content of article 2</p>
+            </div>
+        </section>
+        <footer>
+            <p>Footer content here.</p>
+            <a href="#">Privacy Policy</a>
+            <a href="#">Terms of Service</a>
+            <a href="#">Copyright</a>
+        </footer>
+    </body>
+</html>

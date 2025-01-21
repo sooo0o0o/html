@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+    <meta charset="utf-8">
+    <title>3. CSS 구조 선택자</title>
+        <!-- 
+            날짜 : 2025.01.21
+            이름 : 곽혜수
+            내용 : CSS 기본 선택자 학습하기
+        -->
+    <style>
+        /*구조 선택자*/
+        #city > li:first-child {
+            color : red;
+        }
+        #city > li:nth-child(2) {
+            color : orange;
+        }
+        #city > li:nth-child(4) {
+            color : green;
+        }
+        #city > em:last-child {
+            color : purple;
+        }
+
+        #city > li:nth-of-type(1) {
+            background-color: yellow;
+        }
+        #city > em:nth-of-type(1) {
+            background-color: orange;
+        }
+
+        ul:nth-child(3) > li:nth-child(1) {
+            color : blue;
+        }
+        ul:nth-of-type(2) > li:nth-child(1) {
+            color : green;
+        }
+        ul:nth-last-of-type(1) > li:nth-child(4) {
+            color : red;
+        }
+
+    </style>
+    <head>
+
+
+    </head>
+
+    <body>
+        <h3>3. CSS 구조 선택자</h3>
+
+        <ul id = "city">
+            <li>서울</li>
+            <li>대전</li>
+            <li>대구</li>
+            <li>부산</li>
+            <li>광주</li>
+            <em>인천</em>
+            <em>울산</em>
+            <em>세종</em>
+        </ul>
+
+        <ul>
+            <li>한국</li>
+            <li>미국</li>
+            <li>일본</li>
+            <li>중국</li>
+            <li>호주</li>
+        </ul>
+
+    </body>
+</html> 

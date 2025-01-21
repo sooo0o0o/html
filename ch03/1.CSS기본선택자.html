@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>1.CSS 기본 선택자</title>
+         <!-- 
+            날짜 : 2025.01.21
+            이름 : 곽혜수
+            내용 : CSS 기본 선택자 학습하기
+        -->
+            <style>
+                /* 전체 선택자 */
+                * {
+                    color : navy
+                    
+                }
+
+
+                /* 태그 선택자 */
+                h3 {
+                    color : orangered;
+                }
+
+                p {
+                    color : olive;
+                }
+
+
+                /* 클래스 선택자 */
+                .hello {
+                    color : orange;
+
+                }
+
+
+                /* 아이디 선택자 */ /*최우선 선택자*/
+                #hello {
+                    color : rgb(172, 96, 146);
+                }
+
+
+
+            </style>
+    </head>
+    <body>
+        <h3>1. CSS 기본 선택자</h3>
+        <p>
+            Hello World <br>
+            Hello HTML
+
+        </p>
+
+        <p class="hello">
+            Hello World <br>
+            Hello HTML
+
+        </p>
+
+        <p class="hello">
+            Hello World <br>
+            Hello HTML
+
+        </p>
+
+        <p id="hello">
+            Hello World <br>
+            Hello HTML
+
+        </p>
+
+
+    </body>
+</html>

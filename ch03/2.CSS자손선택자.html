@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset="UTF-8">
+
+        <title>2. CSS 자손 선택자</title>
+
+        <!-- 
+            날짜 : 2025.01.21
+            이름 : 곽혜수
+            내용 : CSS 기본 선택자 학습하기
+        -->
+    
+    <style>
+        /*자식 선택자*/
+        section > h3 {
+            color : blue;
+        }
+        body > h3 {
+            color : olive;
+        }
+
+        .text1 > em {
+            color: green;
+        }
+
+        /*후손 선택자*/
+        .text2 > em > b {
+            color : orange;
+
+        }
+
+
+        /*형제 선택자*/
+        .busan > ol > .sm {
+            color : blueviolet;
+        }
+        
+        /*서면 그다음 형제 li 선택자*/
+        .busan > ol > .sm + li {
+            color : darkcyan;
+        }
+
+         /*서면 그다음 모든 형제 li 선택자*/
+        .busan > ol > .sm ~ li {
+            background: skyblue;
+        }
+
+    </style>
+
+    </head>
+
+
+
+    <body>
+
+    <h3> 2. CSS 자손 선택자</h3>
+
+        <section>
+            <h3>애국가 </h3>
+            <p class="text1">
+                동해물과 백두산이 마르고 닳도록<br>
+                <em>
+                    무궁화 삼천리 화려강산<br>
+                    <b>대한사람</b> 대한으로 길이 보전하세 
+                </em>
+            </p>
+            <p class="text2">
+                남산위에 저 소나무 철갑을 두르듯<br>
+                <em>
+                    무궁화 삼천리 화려강산<br>
+                    <b>대한사람</b> 대한으로 길이 보전하세 
+                </em>
+            </p>
+
+        </section>
+        <ul>
+            <li>서울</li>
+            <li>대전</li>
+            <li>대구</li>
+            <li class="busan">
+                <strong>부산</strong>
+                <ol>
+                    <li class = "sm"> 서면 </li>
+                    <li>해운대</li>
+                    <li>광안리</li>
+                </ol>
+            </li>
+            <li>광주</li>
+        </ul>
+        
+    </body>
+
+
+</html>
