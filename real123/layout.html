@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>부동산113</title>
+        <!-- 
+            날짜 : 2025.02.03
+            이름 : 곽혜수
+            내용 : UI 디자인 실습하기
+        -->
+
+        <style>
+            /*초기화*/
+            * {
+                margin: 0;
+                padding: 0;
+                font: normal 12px '고딕'
+            }
+
+            ul, ol {list-style: none;}
+            a {text-decoration: none; color:#111}
+            input, textarea {outline: none;}
+
+            #container {
+                width: 100%;
+                height: auto;
+                border: 1px solid red;
+                box-sizing: border-box;
+            }
+
+            /*HEADER*/
+            header {
+                width: 100%;
+                height: 80px;
+                border: 1px solid blue;
+                box-sizing: border-box;
+            }
+            header > div {
+                width: 1000px;
+                height: 80px;
+                border: 1px solid green;
+                box-sizing: border-box;
+                margin: 0 auto;
+            }
+
+            /*MAIN*/
+            main{
+                width: 1000px;
+                height: auto;
+                
+                margin: 0 auto;
+            }
+            
+            main > div{
+                overflow: hidden;
+                margin-top: 5px;
+            }
+            main > div > div{}
+            main > div > .banner{
+                width: 588px; 
+                height: 320px;
+                border: 1px solid green;
+                box-sizing: border-box;
+                float: left;
+            }
+            main > div > .call{
+                width: 406px;
+                height: 133px;
+                border: 1px solid green;
+                box-sizing: border-box;
+                float: right;
+            }
+            main > div > .qna{
+                width: 406px;
+                height: 182px;
+                border: 1px solid green;
+                box-sizing: border-box;
+                float: right;
+                margin-top: 5px;
+            }
+
+            main > section{
+                width: 100%;
+                height: auto;
+                
+                margin-top: 5px;
+                overflow: hidden;
+            }
+            main > section > aside{
+                width: 195px;
+                height: 760px;
+                border: 1px solid green;
+                box-sizing: border-box;
+                float: left;
+            }
+            main > section > article{
+                width: 800px;
+                height: 250px;
+                border: 1px solid green;
+                box-sizing: border-box;
+                float: right;
+                margin-bottom: 5px;
+            }
+
+            /*FOOTER*/
+            footer {
+                width: 1000px;
+                height: 130px;
+                border: 1px solid blue;
+                box-sizing: border-box;
+                margin: 0 auto;
+            }
+
+
+        </style>
+    </head>
+    <body>
+        
+        <div id="container">
+            <header>
+                <div></div>
+            </header>
+            <main>
+                <div>
+                    <div class="banner"></div>
+                    <div class="call"></div>
+                    <div class="qna"></div>
+                </div>
+                <section>
+                    <aside></aside>
+                    <article></article>
+                    <article></article>
+                    <article></article>
+                </section>
+
+            </main>
+            <footer></footer>
+        </div>
+
+
+    </body>
+</html>
