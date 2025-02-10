@@ -29,12 +29,18 @@
                 overflow: clip;
             }
 
+            main {
+                width: 100%;
+                height: auto;
+            }
+
             /*******************************************************************/
             #wrapper {
                 width: 800px;
                 height: auto;
                 margin: 0 auto;
             }
+            
             header {
                 width: 100%;
                 height: 35px;
@@ -52,8 +58,47 @@
             }
             
             
-            main{}
-            
+            #find > section {
+                width: 600px;
+                height: auto;
+                margin: 60px auto;
+                overflow: hidden;
+            }
+            #find > section table {
+                width: 100%;
+                height: auto;
+                border-collapse: collapse;
+                border-spacing: 0;
+                border-top: 2px solid #111;
+            }
+            #find > section > div {
+                float: right;
+                margin-top: 10px;
+            }
+            #find > section table tr > td {
+                padding: 12px;
+                border: 1px solid #e9e9e9;
+                box-sizing: border-box;
+            }
+            #find > section table tr > td:nth-child(1) {
+                width: 120px;
+            }
+            #find > section table tr > td:nth-child(2) {
+                font-weight: bold;
+            }
+            #find > section > p {
+                margin-top: 12px;
+                margin-bottom: 12px;
+                line-height: 20px;
+            }
+
+            .btn {
+                display: inline-block;
+                padding: 8px;
+                border: 1px solid #bebebe;
+                text-align: center;
+                cursor: pointer;
+            }
             
             
             
@@ -81,7 +126,39 @@
                 </h3>
             </header>
 
-            <main></main>
+            <main id="find">
+                <section class="resultUserId">
+                    <form action="#">
+                        <h2 class="tit">아이디 찾기 결과</h2>
+                        <table border="1">
+                            <tbody>
+                                <tr>
+                                    <td>이름</td>
+                                    <td>홍길동</td>
+                                </tr>
+                                <tr>
+                                    <td>아이디</td>
+                                    <td>honggildong</td>
+                                </tr>
+                                <tr>
+                                    <td>이메일</td>
+                                    <td>honggildong@gmail.com</td>
+                                </tr>
+                                <tr>
+                                    <td>가입일</td>
+                                    <td>2022-11-16 10:20</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </form>
+                    <p> 고객님의 정보와 일치하는 아이디 입니다.</p>
+                    <div>
+                        <a href="/html-board/user/login.html" class="btn btnCancel">로그인</a>
+                        <a href="/html-board/find/password.html" class="btn btnNext">비밀번호 찾기</a>
+                    </div인
+                </section>
+
+            </main>
 
             <footer>
                 <p> 
