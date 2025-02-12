@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <title>인터랙티브 달력</title>
+    <style>
+        table {
+            width: 765px;
+            height: 631px;
+            border-collapse: collapse;
+            margin: 20px auto;
+            text-align: center;
+        }
+        td {
+            border: 1px solid #c2c2c2;
+            padding: 10px;
+            vertical-align: top;
+        }
+        th {
+            border: 1px solid #c2c2c2;
+            text-align: center;
+        }
+        .controls {
+            margin-bottom: 10px;
+        }
+        .controls > button:nth-child(2) {
+            border: 1px solid green;
+            width: 60px;
+            height: 40px;
+            margin-right: 10px;
+            background-color: #838383;
+            color: white;
+            border-radius: 8px;
+        }
+        .controls > button:nth-child(3) {
+            background-color: #3d3d3d;
+            color: white;
+            width: 40px;
+            height: 40px;
+        }
+        .controls > button:nth-child(4) {
+            background-color: #3d3d3d;
+            color: white;
+            width: 40px;
+            height: 40px;
+        }
+        button {
+            padding: 5px 10px;
+            font-size: 14px;
+            cursor: pointer;
+            margin: 5px;
+        }
+        .today {
+            background-color: yellow;
+            font-weight: bold;
+        }
+        #monthYear {
+            font-size: 25px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="controls">
+    <span id="monthYear"></span>
+    <button onclick="goToToday()">오늘</button>
+    <button onclick="prevMonth()">◀</button>
+    <button onclick="nextMonth()">▶</button>
+   
+</div>
+
+<table id="calendar">
+    <tr>
+        <th>Sun</th>
+        <th>Mon</th>
+        <th>Tue</th>
+        <th>Wed</th>
+        <th>Thu</th>
+        <th>Fri</th>
+        <th>Sat</th>
+    </tr>
+</table>
+
+<script>
+    let today = new Date(); // 현재 날짜
+    let currentYear = today.getFullYear();
+    let currentMonth = today.getMonth(); // 0(1월) ~ 11(12월)
+
+    const monthNames = [
+        "January", "February", "March", "April", "May", "June",
+        "July", "August", "September", "October", "November", "December"
+    ];
+
+    function generateCalendar(year, month) {
+        let calendar = document.getElementById("calendar");
+        let monthYear = document.getElementById("monthYear");
+
+        let firstDay = new Date(year, month, 1).getDay();
+        let lastDate = new Date(year, month + 1, 0).getDate();
+
+        // "Month YYYY" 형식으로 표시
+        monthYear.innerText = `${monthNames[month]} ${year}`;
+
+        // 기존 달력 초기화
+        while (calendar.rows.length > 1) {
+            calendar.deleteRow(1);
+        }
+
+        let row = calendar.insertRow();
+        let cellIndex = 0;
+
+        for (let i = 0; i < firstDay; i++) {
+            row.insertCell();
+            cellIndex++;
+        }
+
+        for (let day = 1; day <= lastDate; day++) {
+            let cell = row.insertCell();
+            cell.innerText = day;
+
+            // 오늘 날짜 강조 (기존 "today" 클래스 삭제 후 추가)
+            if (year === new Date().getFullYear() && month === new Date().getMonth() && day === new Date().getDate()) {
+                cell.classList.add("today");
+            }
+
+            cellIndex++;
+            if (cellIndex % 7 === 0) {
+                row = calendar.insertRow();
+            }
+        }
+    }
+
+    function prevMonth() {
+        currentMonth--;
+        if (currentMonth < 0) {
+            currentMonth = 11;
+            currentYear--;
+        }
+        generateCalendar(currentYear, currentMonth);
+    }
+
+    function nextMonth() {
+        currentMonth++;
+        if (currentMonth > 11) {
+            currentMonth = 0;
+            currentYear++;
+        }
+        generateCalendar(currentYear, currentMonth);
+    }
+
+    function goToToday() {
+        let now = new Date(); // 오늘 날짜를 다시 가져옴
+        currentYear = now.getFullYear();
+        currentMonth = now.getMonth();
+        generateCalendar(currentYear, currentMonth);
+    }
+
+    generateCalendar(currentYear, currentMonth);
+</script>
+
+</body>
+</html>
